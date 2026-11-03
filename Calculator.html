@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator - Login Style</title>
+<style>
+ body {
+    background-color: cyan; margin-top: 20px; margin-left: 500px;}
+    h1 {margin-left: 0%;}
+</style>
+</head>
+<body>
+
+<form onsubmit="return false;">
+  <h2>Calculator</h2>
+
+  <label for="num1">1st Number:</label>
+  <input type="number" id="num1" name="num1" placeholder="Enter first number" required><br><br>
+
+  <label for="num2">2nd Number:</label>
+  <input type="number" id="num2" name="num2" placeholder="Enter second number" required><br><br>
+
+
+  <button type="submit" onclick="teranya()">Add Numbers</button><br><br>
+  <button type="submit" onclick="ikuramo()">sub numbers</button><br><br>
+
+
+  <center><div id="result" ></div></center>
+  <div id="kola"></div> 
+</form>
+
+<script>
+  function teranya() {
+    var a = parseFloat(document.getElementById("num1").value);
+    var b = parseFloat(document.getElementById("num2").value);
+
+    
+    var total = a + b;
+    document.getElementById("result").innerText = "Result: " + a + " + " + b + " = " + total;
+  }
+
+    function ikuramo() {
+    var a = parseFloat(document.getElementById("num1").value);
+    var b = parseFloat(document.getElementById("num2").value);
+
+    var total = a - b;
+
+    document.getElementById("result").innerText =
+        "Resurt: " + a + " - " + b + " = " + total;
+}
+</script>
+<div>
+    <h1>IF you need scientific calculator click here</h1>  
+    <button>
+      <a href="cent.html">GET scientific</a>
+    </button>
+  </div>
+</body>
+</html>
